@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="style.css">
     <title>Лаборатори 02: Ажилд орох анкет</title>
 </head>
 <body>
 
     <!-- Вэбийн толгой хэсэг -->
     <header>
-        <h1>Ажилд орох анкет</h1>
+        <h1 class="main-title">Ажилд орох анкет</h1>
         <!-- Навигацийн цэс -->
         <nav>
             <ul>
@@ -67,32 +67,38 @@
 
             <!-- Форм болон Оролтын элементүүд -->
             <section>
-                <form action="#" method="POST" enctype="multipart/form-data">
+                <form action="#" method="POST" enctype="multipart/form-data" class="application-form">
                     
                     <!-- 1-р бүлэг: Хувийн мэдээлэл -->
                     <fieldset>
                         <legend>Хувийн мэдээлэл</legend>
-
+                    <div class="form-group">
                         <label for="fullname">Овог нэр:</label><br>
                         <input type="text" id="fullname" name="fullname" placeholder="Б. Эрдэнэбаяр" required minlength="2"><br><br>
-
+                        </div>
+                        <div class="form-group">
                         <label for="email">Цахим хаяг (Email):</label><br>
                         <input type="email" id="email" name="email" placeholder="example@domain.com" required><br><br>
-
+                        </div>
+                        <div class="form-group">
                         <label for="password">Нууц үг:</label><br>
                         <input type="password" id="password" name="password" required minlength="6"><br><br>
-
+                        </div>
+                        <div class="form-group">
                         <label for="phone">Утасны дугаар:</label><br>
                         <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="8961****" required><br><br>
-
+                        </div>
+                        <div class="form-group">
                         <label for="dob">Төрсөн огноо:</label><br>
                         <input type="date" id="dob" name="dob" required><br><br>
-
+                        </div>
+                        <div class="form-group">
                         <label>Хүйс:</label><br>
                         <input type="radio" id="male" name="gender" value="male">
                         <label for="male">Эрэгтэй</label>
                         <input type="radio" id="female" name="gender" value="female">
                         <label for="female">Эмэгтэй</label>
+                        </div>
                     </fieldset>
                     
                     <br>
