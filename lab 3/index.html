@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 03: Ажилд орох анкет (CSS3)</title>
+    <!-- Lab 3: External CSS холбосон хэсэг -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Вэбийн толгой хэсэг -->
+    <header>
+        <h1>Ажилд орох анкет</h1>
+        <!-- Навигацийн цэс -->
+        <nav>
+            <ul>
+                <li><a href="./index.html">Нүүр</a></li>
+                <li><a href="#">Анкет засах</a></li>
+                <li><a href="#">Холбоо барих</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Үндсэн контент -->
+    <main>
+        <!-- Position жишээ badge/tooltip -->
+        <div class="badge-container">
+            <h2>Ажилд орох анкет бөглөх</h2>
+            <span class="tooltip-badge">Шинэ</span>
+        </div>
+        
+        <section>
+            <p>Доорх формын дагуу мэдээллээ бүрэн, үнэн зөв зааж бөглөнө үү.</p>
+        </section>
+
+        <!-- Сонирхлын жагсаалт -->
+        <section>
+            <h2>Миний сонирхол</h2>
+            <ul>
+                <li>Вэб хөгжүүлэлт</li>
+                <li>Ууланд гарах</li>
+                <li>Сагс тоглох</li>
+            </ul>
+        </section>
+
+        <!-- Ажлын туршлага -->
+        <section>
+            <h2>Ажлын туршлага</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Байгууллага</th>
+                        <th>Албан тушаал</th>
+                        <th>Ажилласан жил</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>APU ХХК</td>
+                        <td>Туслах инженер</td>
+                        <td>2020-2023</td>
+                    </tr>
+                    <tr>
+                        <td>Витафит ХК</td>
+                        <td>Вэб хөгжүүлэгч</td>
+                        <td>2024-2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Форм болон Оролтын элементүүд -->
+        <section>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                
+                <!-- 1-р бүлэг: Хувийн мэдээлэл -->
+                <fieldset>
+                    <legend>Хувийн мэдээлэл</legend>
+                    
+                    <label for="fullname">Овог нэр:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Б. Эрдэнэбаяр" required>
+
+                    <label for="email">Цахим хаяг (Email):</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+                    <label for="password">Нууц үг:</label>
+                    <input type="password" id="password" name="password" required minlength="6">
+
+                    <label for="phone">Утасны дугаар:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="8961****">
+
+                    <label for="dob">Төрсөн огноо:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label>Хүйс:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male" style="display:inline;">Эрэгтэй</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" style="display:inline;">Эмэгтэй</label>
+                </fieldset>
+
+                <!-- 2-р бүлэг: Мэргэжил ба Сургалтын мэдээлэл -->
+                <fieldset>
+                    <legend>Боловсрол ба Сонирхол</legend>
+                    
+                    <label for="degree">Суралцсан түвшин:</label>
+                    <select id="degree" name="degree" required>
+                        <option value="">-- Сонгоно уу --</option>
+                        <option value="bachelor">Бакалавр</option>
+                        <option value="master">Магистр</option>
+                        <option value="doctor">Доктор</option>
+                    </select>
+
+                    <label>Ямар програм хангамжийг мэдэх вэ:</label>
+                    <input type="checkbox" id="html" name="skills" value="HTML">
+                    <label for="html" style="display:inline;">HTML5 / CSS3</label><br>
+                    <input type="checkbox" id="js" name="skills" value="JavaScript">
+                    <label for="js" style="display:inline;">JavaScript</label><br>
+                    <input type="checkbox" id="php" name="skills" value="PHP">
+                    <label for="php" style="display:inline;">PHP & MySQL</label><br><br>
+
+                    <label for="avatar">Профайл зураг оруулах:</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+
+                    <label for="bio">Товч танилцуулга / Өөрийн тухай:</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Өөрийн танилцуулгыг энд бичнэ YY..."></textarea>
+                </fieldset>
+
+                <!-- Илгээх ба Арилгах товчнууд -->
+                <button type="submit">Анкет илгээх</button>
+                <button type="reset">Дахин эхлүүлэх</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Хөл хэсэг -->
+    <footer>
+        <p>&copy; 2026 MCS корпораци. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
+
+</body>
+</html>
