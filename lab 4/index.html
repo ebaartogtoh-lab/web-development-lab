@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оюутны портал - Лаб 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation (Flexbox ашигласан) -->
+    <header class="header">
+        <div class="logo-area">
+            <h1>Оюутны портал</h1>
+            <p>Хичээл, мэдээлэл, сургалтын материал</p>
+        </div>
+        <nav class="navbar">
+            <a href="#">Хичээлүүд</a>
+            <a href="#">Мэдээлэл</a>
+            <a href="#">Холбоо барих</a>
+        </nav>
+    </header>
+
+    <!-- Main Container Layout (Grid & Flexbox хослуулсан) -->
+    <div class="main-container">
+        
+        <!-- Үндсэн агуулга (CSS Grid ашиглан 3 баганаар байрлуулсан картууд) -->
+        <main class="content">
+            <section class="intro">
+                <h2>Миний хичээлүүд</h2>
+                <p>Суралцах хичээлээ сонгож, дэлгэрэнгүй мэдээлэлтэй танилцаарай.</p>
+            </section>
+
+            <div class="grid-cards">
+                <!-- Карт 1 -->
+                <div class="card">
+                    <h3>Вэб зохиомж</h3>
+                    <p>HTML, CSS, Flexbox болон Grid ашиглан вэб хуудасны бүтэц, загвар бүтэж байна.</p>
+                    <a href="#" class="btn">Дэлгэрэнгүй →</a>
+                </div>
+                <!-- Карт 2 -->
+                <div class="card">
+                    <h3>Программчлал</h3>
+                    <p>Хувьсагч, нөхцөл, давталт болон функцийн үндсийг сурна.</p>
+                    <a href="#" class="btn">Дэлгэрэнгүй →</a>
+                </div>
+                <!-- Карт 3 -->
+                <div class="card">
+                    <h3>Өгөгдлийн сан</h3>
+                    <p>Хүснэгт, холбоос болон SQL асуулгын талаар судална.</p>
+                    <a href="#" class="btn">Дэлгэрэнгүй →</a>
+                </div>
+                <!-- Карт 4 -->
+                <div class="card">
+                    <h3>Математик</h3>
+                    <p>Математикийн бодлого бодож, логик сэтгэлгээг хөгжүүлнэ.</p>
+                    <a href="#" class="btn">Дэлгэрэнгүй →</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar (Хажуугийн хэсэг) -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Зарлал</h3>
+                <p>Лаборатори 4-ийн аналаа хийж, багшдаа шалгуулаарай.</p>
+                <span class="badge">Сургалтын мэдээлэл</span>
+            </div>
+            <div class="widget">
+                <h3>Хэрэгцээтэй холбоос</h3>
+                <ul>
+                    <li><a href="#">Хичээлийн жагсаалт</a></li>
+                    <li><a href="#">Вэб зохиомжийн мэдээлэл</a></li>
+                    <li><a href="#">Холбоо барих</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Оюутны портал. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
+
+</body>
+</html>
