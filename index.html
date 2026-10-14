@@ -1,14 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="mn">
 <head>
     <meta charset="UTF-8">
-    <title>Web Development Labs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаб 5 - Responsive Вэб Хуудас</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Лабораторийн ажил</h1>
-    <ul>
-        <li><a href="./lab 3/index.html">Lab 3</a></li>
-        <li><a href="./lab 4/index.html">Lab 4</a></li>
-    </ul>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="logo">MyWebsite</div>
+        <!-- Утасны цэсний товчлуур -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <nav class="nav-links">
+            <a href="#home">Нүүр</a>
+            <a href="#about">Бидний тухай</a>
+            <a href="#services">Үйлчилгээ</a>
+            <a href="#contact">Холбоо барих</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Mobile-First Responsive Вэб Хуудас</h1>
+        <p>Энэхүү вэб хуудас нь гар утас, таблет, компьютерт автоматаар зохицон харагдана.</p>
+        <a href="#services" class="btn">Илүү ихийг үзэх</a>
+    </section>
+
+    <!-- Main Content / Cards Section -->
+    <main class="container" id="services">
+        <h2>Бидний Үйлчилгээ</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Веб Дизайн</h3>
+                <p>Хэрэглэгчид ээлтэй, орчин үеийн UX/UI шийдэл бүхий дизайн.</p>
+            </div>
+            <div class="card">
+                <h3>Responsive Хөгжүүлэлт</h3>
+                <p>Бүх төрлийн төхөөрөмж дээр хэвтээ скролл үүсэхгүй ажиллана.</p>
+            </div>
+            <div class="card">
+                <h3>SEO Оновчлол</h3>
+                <p>Хайлтын системд өндөр зэрэглэлтэй харагдах бүтэц.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Лаб 5 - Responsive Даалгавар</p>
+    </footer>
+
 </body>
 </html>
