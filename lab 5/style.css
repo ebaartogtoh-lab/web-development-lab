@@ -1,0 +1,202 @@
+/* ==========================================
+   1. General & Reset Styles (Үндсэн тохиргоо)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ==========================================
+   2. Header & Navigation (Mobile-First)
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4ca1af;
+}
+
+/* Hamburger Menu Toggle Button */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Mobile Nav Links (Анхдагчаар нуугдана) */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c3e50;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #34495e;
+}
+
+/* Hamburger дарахад цэс задрах тохиргоо */
+.menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
+
+/* ==========================================
+   3. Hero Section
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* ==========================================
+   4. Cards Section (Grid Layout)
+   ========================================== */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* Гар утас дээр 1 баганатай харагдана */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+/* ==========================================
+   5. Footer
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #2c3e50;
+    color: #fff;
+    margin-top: 3rem;
+}
+
+/* ==========================================
+   6. Media Queries (Таблет & Компьютер)
+   ========================================== */
+
+/* Таблет ба дэлгэц томрох үед (min-width: 768px) */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none; /* Hamburger цэсийг нууна */
+    }
+
+    .nav-links {
+        display: flex !important; /* Цэсийг зэрэгцүүлж харуулна */
+        position: static;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav-links a {
+        padding: 0 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    /* Карт 3 багана болж өөрчлөгдөнө */
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
