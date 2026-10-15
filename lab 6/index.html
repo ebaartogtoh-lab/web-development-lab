@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаб 6 - CSS3 Animation & Multimedia Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation (Mobile-First + Inline SVG + Theme Toggle) -->
+    <header class="navbar">
+        <div class="logo">
+            <!-- Inline SVG Logo -->
+            <svg class="logo-svg" viewBox="0 0 24 24" width="28" height="28">
+                <circle cx="12" cy="12" r="10" fill="var(--primary-color)"/>
+                <path d="M8 12l3 3 5-5" stroke="#ffffff" stroke-width="2" fill="none"/>
+            </svg>
+            <span>Оюутны Портал</span>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <nav class="nav-links">
+            <a href="#hero">Нүүр</a>
+            <a href="#gallery">Цомог (3D Flip)</a>
+            <a href="#media">Мультимедиа</a>
+            <!-- Dark/Light Theme Button -->
+            <button id="theme-toggle" class="theme-btn" aria-label="Theme toggle">🌙 Theme</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Stagger Animations -->
+    <section class="hero" id="hero">
+        <h1 class="stagger-item" style="--i: 1;">CSS3 Animation & Multimedia</h1>
+        <p class="stagger-item" style="--i: 2;">Лаборатори 4 болон 5-ын үргэлжлэл: 3D эргэдэг карт болон Вэб Мультимедиа.</p>
+        <a href="#gallery" class="btn stagger-item" style="--i: 3;">Цомог Үзэх</a>
+    </section>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- 3D Flip Card Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <h2 class="section-title">Хичээлүүдийн Цомог (3D Flip Cards)</h2>
+            
+            <div class="card-grid">
+                <!-- Card 1 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/photo1.jpg" alt="Вэб Зохиомж" onerror="this.src='https://via.placeholder.com/300x180?text=Web+Design'">
+                            <h3>Вэб Зохиомж</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>HTML5 & CSS3</h3>
+                            <p>Вэб хуудасны бүтэц, хэв заагч болон responsive дизайны үндэс.</p>
+                            <button class="flip-btn">Буцаах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/photo2.jpg" alt="Програмчлал" onerror="this.src='https://via.placeholder.com/300x180?text=Programming'">
+                            <h3>Програмчлал</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>JavaScript</h3>
+                            <p>Хувьсагч, нөхцөл, давталт болон функцийн үндсийг сурна.</p>
+                            <button class="flip-btn">Буцаах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img/photo3.jpg" alt="Өгөгдлийн бааз" onerror="this.src='https://via.placeholder.com/300x180?text=Database'">
+                            <h3>Өгөгдлийн бааз</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>SQL бааз</h3>
+                            <p>Хүснэгт, холбоос болон SQL асуулгын талаар судална.</p>
+                            <button class="flip-btn">Буцаах</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Multimedia Section -->
+        <section id="media" class="media-section">
+            <h2 class="section-title">Мультимедиа Хэсэг</h2>
+            
+            <div class="media-grid">
+                <!-- HTML5 Video with Track Subtitles -->
+                <div class="media-card">
+                    <h3>Видео Хичээл (Video & Track)</h3>
+                    <video controls poster="https://via.placeholder.com/600x320?text=Video+Lesson" width="100%">
+                        <source src="video/clip.mp4" type="video/mp4">
+                        <source src="video/clip.webm" type="video/webm">
+                        <track src="video/clip.mn.vtt" kind="subtitles" srclang="mn" label="Монгол хадмал" default>
+                        Таны хөтөч видео тоглуулахыг дэмжихгүй байна.
+                    </video>
+                </div>
+
+                <!-- Embedded Iframe -->
+                <div class="media-card">
+                    <h3>Embedded Iframe</h3>
+                    <div class="iframe-wrapper">
+                        <iframe width="100%" height="240" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Оюутны Портал. Лаборатори 6 даалгавар.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
