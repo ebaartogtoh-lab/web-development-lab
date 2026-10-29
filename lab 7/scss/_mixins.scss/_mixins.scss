@@ -1,0 +1,21 @@
+@use 'tokens' as *;
+
+// Flexbox төвлөрүүлэх mixin
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Media query responsive mixin
+@mixin respond($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' олдсонгүй.";
+  }
+}

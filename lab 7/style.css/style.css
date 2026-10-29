@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333333;
+  font-size: 1rem; }
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.media-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+  .media-card__title {
+    font-size: 18px;
+    margin-bottom: 10px; }
+
+.media-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px; }

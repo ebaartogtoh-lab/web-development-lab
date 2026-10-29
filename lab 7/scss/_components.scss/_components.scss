@@ -1,0 +1,32 @@
+@use 'mixins' as *;
+@use 'functions' as *;
+
+// BEM загвар бүхий медиа карт
+.media-card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: rem(16px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+  &__title {
+    font-size: rem(18px);
+    margin-bottom: rem(10px);
+  }
+}
+
+.media-grid {
+  @include flex-center(row, space-between, stretch);
+  gap: rem(20px);
+
+  @include respond('tablet') {
+    flex-direction: column;
+  }
+}
+
+// @each-ээр utility класс үүсгэх
+$alignments: left, center, right;
+@each $align in $alignments {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}

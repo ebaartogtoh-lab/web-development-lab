@@ -1,0 +1,31 @@
+// Maps
+$colors: (
+  "primary": #007bff,
+  "secondary": #6c757d,
+  "bg-light": #f8f9fa,
+  "bg-dark": #1a1a1a,
+  "text-light": #333333,
+  "text-dark": #ffffff
+);
+
+$radii: (
+  "sm": 4px,
+  "md": 8px,
+  "lg": 16px
+);
+
+$breakpoints: (
+  "mobile": 576px,
+  "tablet": 768px,
+  "desktop": 1024px
+);
+
+// :root-д CSS custom property үүсгэх
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+  @each $name, $value in $radii {
+    --radius-#{$name}: #{$value};
+  }
+}
