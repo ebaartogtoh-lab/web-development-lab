@@ -15,7 +15,61 @@ body {
 }
 
 /* ==========================================
-   2. Header & Navigation (Mobile-First)
+   2. Device Switcher (Төхөөрөмж солих товчлуурууд - ШИНЭЭР НЭМСЭН)
+   ========================================== */
+.device-switcher {
+    text-align: center;
+    background: #1a252f;
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.device-switcher button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.device-switcher button:hover {
+    background-color: #2980b9;
+}
+
+/* Вэб хуудсыг хязгаарлаж харуулах фрейм хайрцаг */
+#preview-frame {
+    margin: 20px auto;
+    transition: all 0.3s ease;
+    border: 4px solid #2c3e50;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: #fff;
+}
+
+/* Төхөөрөмжийн өөр өөр хэмжээнүүд */
+.device-mobile {
+    width: 380px !important;
+}
+
+.device-tablet {
+    width: 768px !important;
+}
+
+.device-desktop {
+    width: 100% !important;
+    max-width: 1200px;
+}
+
+/* ==========================================
+   3. Header & Navigation (Mobile-First)
    ========================================== */
 .navbar {
     display: flex;
@@ -77,7 +131,7 @@ body {
 }
 
 /* ==========================================
-   3. Hero Section
+   4. Hero Section
    ========================================== */
 .hero {
     background: linear-gradient(135deg, #2c3e50, #4ca1af);
@@ -115,7 +169,7 @@ body {
 }
 
 /* ==========================================
-   4. Cards Section (Grid Layout)
+   5. Cards Section (Grid Layout)
    ========================================== */
 .container {
     max-width: 1100px;
@@ -154,49 +208,8 @@ body {
 }
 
 /* ==========================================
-   5. Footer
+   6. Footer
    ========================================== */
 footer {
     text-align: center;
-    padding: 1.5rem;
-    background-color: #2c3e50;
-    color: #fff;
-    margin-top: 3rem;
-}
-
-/* ==========================================
-   6. Media Queries (Таблет & Компьютер)
-   ========================================== */
-
-/* Таблет ба дэлгэц томрох үед (min-width: 768px) */
-@media (min-width: 768px) {
-    .hamburger {
-        display: none; /* Hamburger цэсийг нууна */
-    }
-
-    .nav-links {
-        display: flex !important; /* Цэсийг зэрэгцүүлж харуулна */
-        position: static;
-        flex-direction: row;
-        width: auto;
-        padding: 0;
-        background-color: transparent;
-    }
-
-    .nav-links a {
-        padding: 0 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    /* Карт 3 багана болж өөрчлөгдөнө */
-    .card-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+    padding:
